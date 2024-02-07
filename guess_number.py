@@ -1,6 +1,8 @@
 number = 10
 
-print("I'm thinking of a number...")
+limit = 3
+
+print(f"I'm thinking of a number... {limit} guesses left ")
 guess = input("What number am I thinking of? ")
 while True:
     
@@ -11,5 +13,10 @@ while True:
         print('quit the game')
         break
     else:
-        print(f"Sorry! Try again.")
+        limit -= 1
+        print(f"Sorry! Try again. {limit} guesses left")
+        
+        if limit == 0:
+            print(f"OH NO MORE ATTEMPT, The correct number is {number}")
+            break
     guess = input("What number am I thinking of? ")
