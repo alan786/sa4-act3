@@ -19,4 +19,9 @@ while True:
         if limit == 0:
             print(f"OH NO MORE ATTEMPT, The correct number is {number}")
             break
+        guess = int(guess)
+        if guess > number:
+            print(f"Sorry! Its too high.")
+        else:
+            print(f"Sorry! Its too low.")
     guess = input("What number am I thinking of? ")
