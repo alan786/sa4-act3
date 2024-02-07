@@ -11,5 +11,9 @@ while True:
         print('quit the game')
         break
     else:
-        print(f"Sorry! Try again.")
+        guess = int(guess)
+        if guess > number:
+            print(f"Sorry! Its too high.")
+        else:
+            print(f"Sorry! Its too low.")
     guess = input("What number am I thinking of? ")
